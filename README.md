@@ -2,7 +2,7 @@
 
 **Alumno:** Lucas López Aja · **Módulo:** M10.2 JSX con React (DAM2)
 
-**Aplicación desplegada:** https://TU-PROYECTO.vercel.app *(sustituir por la URL real de Vercel)*
+**Aplicación desplegada:** https://aplicacionreact.vercel.app/
 
 ## Mejoras implementadas (10 tickets)
 
