@@ -248,7 +248,7 @@ body {
   padding-top: 0.75rem;
 }
 
-/* ===== Ticket 01: contenedor principal y tema claro/oscuro ===== */
+/* ===== Contenedor principal y tema claro/oscuro ===== */
 .app {
   --text-soft: #cbd5e1;
   background: var(--bg);
@@ -286,7 +286,7 @@ body {
   border-top: 1px solid var(--border);
 }
 
-/* ===== Utilidades de los tickets ===== */
+/* ===== Utilidades de los formularios y listas ===== */
 .error-msg { color: #ef4444; font-weight: 600; font-size: 0.9rem; margin-top: 0.4rem; }
 .ok-msg { color: #10b981; font-weight: 600; margin-top: 0.4rem; }
 .empty-state { color: var(--muted); font-style: italic; margin-top: 0.75rem; }

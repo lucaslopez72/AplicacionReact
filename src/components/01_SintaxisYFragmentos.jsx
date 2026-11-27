@@ -21,7 +21,7 @@ function EtiquetaInfo({ texto }) {
 }
 
 export default function SintaxisYFragmentos() {
-  // Ticket 02: input controlado con useState y validación inmediata
+  // input controlado con useState y validación inmediata
   const [alumno, setAlumno] = useState('');
   const nombre = alumno.trim();
   const hayError = nombre.length > 0 && nombre.length < 3;

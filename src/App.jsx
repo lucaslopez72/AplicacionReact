@@ -19,13 +19,13 @@ const SECCIONES = [
   { id: '06', titulo: '6. Demo Integradora', componente: DemoIntegradora }
 ];
 
-// TODO: pon aquí tu nombre completo (aparece en el pie de página)
+
 const NOMBRE_ALUMNO = 'Lucas López Aja';
 const MODULO = 'M10.2 · JSX con React (DAM2)';
 
 export default function App() {
   const [activa, setActiva] = useState('01');
-  // Ticket 01: estado del tema. Alterna la clase CSS "dark" / "light" del contenedor principal
+  // estado del tema. Alterna la clase CSS "dark" / "light" del contenedor principal
   const [tema, setTema] = useState('dark');
 
   // Localizamos dinámicamente el componente a renderizar según la pestaña activa

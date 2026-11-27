@@ -10,7 +10,6 @@ import ResumenKPIs from './ResumenKPIs.jsx';
 // - Renderizado condicional (ternario + && booleano seguro)
 // - Listas con .map() y key única estable
 // - Comunicación mediante props y composición de componentes
-// - Tickets 07-10: búsqueda, ordenación, alta de expedientes, KPIs y localStorage
 // ============================================================================
 
 const CLAVE_STORAGE = 'expedientes-dam2';
@@ -21,7 +20,7 @@ const EXPEDIENTES_INICIALES = [
   { id: 103, nombre: 'Sofía Navarro', nota: 9.5, modulos: ['DI', 'PSP', 'AD', 'PMDM'] }
 ];
 
-// Ticket 10: carga desde localStorage (con tolerancia a datos corruptos)
+// carga desde localStorage (con tolerancia a datos corruptos)
 function cargarExpedientes() {
   try {
     const guardado = localStorage.getItem(CLAVE_STORAGE);
@@ -81,16 +80,16 @@ function TarjetaExpediente({ alumno, seleccionado, onSeleccionar }) {
 }
 
 export default function DemoIntegradora() {
-  // Ticket 08 y 10: la lista es un estado, inicializado desde localStorage
+  // la lista es un estado, inicializado desde localStorage
   const [expedientes, setExpedientes] = useState(cargarExpedientes);
   const [soloAprobados, setSoloAprobados] = useState(false);
   const [seleccionado, setSeleccionado] = useState(null);
 
-  // Ticket 07: búsqueda y ordenación
+  // búsqueda y ordenación
   const [busqueda, setBusqueda] = useState('');
   const [orden, setOrden] = useState('nota-desc');
 
-  // Ticket 08: formulario controlado de alta
+  // formulario controlado de alta
   const [nombreNuevo, setNombreNuevo] = useState('');
   const [notaNueva, setNotaNueva] = useState('');
   const [modulosNuevo, setModulosNuevo] = useState('');
@@ -144,7 +143,7 @@ export default function DemoIntegradora() {
     setErrorForm('');
   };
 
-  // Ticket 10: borrar la clave de localStorage y recuperar los 3 expedientes originales
+  // borrar la clave de localStorage y recuperar los 3 expedientes originales
   const restablecer = () => {
     try {
       localStorage.removeItem(CLAVE_STORAGE);
@@ -163,7 +162,7 @@ export default function DemoIntegradora() {
           Composición de componentes reutilizables aplicando todas las reglas de JSX.
         </p>
 
-        {/* Ticket 09: los KPIs se calculan sobre la lista actual (con filtros) */}
+        {/* los KPIs se calculan sobre la lista actual (con filtros) */}
         <ResumenKPIs alumnos={listaFiltrada} />
 
         <div className="form-grid" style={{ marginBottom: '1rem' }}>

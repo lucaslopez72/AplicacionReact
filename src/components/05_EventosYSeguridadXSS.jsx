@@ -22,7 +22,7 @@ const PAYLOADS_XSS = [
 ];
 
 export default function EventosYSeguridadXSS() {
-  // Ticket 06: historial de los últimos 5 eventos (el más reciente primero)
+  // historial de los últimos 5 eventos (el más reciente primero)
   const [historial, setHistorial] = useState([]);
   const contadorId = useRef(0);
   const setUltimoEvento = (texto) => {

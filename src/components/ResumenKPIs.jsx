@@ -1,5 +1,5 @@
 // ============================================================================
-// Ticket 09: componente reutilizable de cuadro de mando (KPIs).
+// componente reutilizable de cuadro de mando (KPIs).
 // Recibe la lista de alumnos por props y calcula 3 indicadores dinámicos.
 // ============================================================================
 function TarjetaKPI({ etiqueta, valor }) {

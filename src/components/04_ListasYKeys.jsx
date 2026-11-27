@@ -24,7 +24,7 @@ export default function ListasYKeys() {
   const [error, setError] = useState('');
   const [busqueda, setBusqueda] = useState('');
 
-  // Ticket 05: filtrado en tiempo real por nombre o código
+  // filtrado en tiempo real por nombre o código
   const termino = busqueda.trim().toLowerCase();
   const modulosFiltrados = modulos.filter(
     (m) => m.nombre.toLowerCase().includes(termino) || m.codigo.toLowerCase().includes(termino)
@@ -34,7 +34,7 @@ export default function ListasYKeys() {
     e.preventDefault();
     if (!nuevoNombre.trim()) return;
 
-    // Ticket 05: impedir duplicados sin distinguir mayúsculas de minúsculas
+    // impedir duplicados sin distinguir mayúsculas de minúsculas
     const existe = modulos.some((m) => m.nombre.toLowerCase() === nuevoNombre.trim().toLowerCase());
     if (existe) {
       setError(`El módulo "${nuevoNombre.trim()}" ya existe en la lista.`);

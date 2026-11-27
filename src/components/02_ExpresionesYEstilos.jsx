@@ -28,7 +28,7 @@ export default function ExpresionesYEstilos() {
   const [tipoIva, setTipoIva] = useState('general');
   const [descuento, setDescuento] = useState(0);
 
-  // Ticket 03: cálculo del desglose fiscal
+  // cálculo del desglose fiscal
   const IVA = TIPOS_IVA.find((t) => t.id === tipoIva).valor;
   const importeDescontado = precioBase * (descuento / 100);
   const baseImponible = precioBase - importeDescontado;

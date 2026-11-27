@@ -83,7 +83,7 @@ export default function RenderizadoCondicional() {
 
           <p>
             <strong>Corregido</strong> (antes <code className="code-inline">notificaciones &amp;&amp; ...</code> pintaba un 0):{' '}
-            {/* Ticket 04: bug corregido, se compara con > 0 para que nunca salga un 0 suelto */}
+            {/* bug corregido, se compara con > 0 para que nunca salga un 0 suelto */}
             <span style={{ color: '#f87171', fontWeight: 'bold' }}>
               {notificaciones > 0 && <span>Tienes {notificaciones} avisos</span>}
             </span>
